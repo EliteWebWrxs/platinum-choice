@@ -54,7 +54,8 @@
 </script>
 
 <Seo
-  description="Platinum Choice Consulting is a woman-owned, minority-owned HR and workforce solutions firm serving government, corporate and nonprofit clients in Washington DC, Virginia, Maryland and Tampa."
+  title="HR & Workforce Solutions Firm"
+  description="Woman-owned, minority-owned HR and workforce solutions firm serving government, corporate and nonprofit clients in DC, Virginia, Maryland and Tampa."
 />
 
 <!-- Hero -->

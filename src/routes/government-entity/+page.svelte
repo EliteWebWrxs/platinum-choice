@@ -16,8 +16,7 @@
 
 <Seo
   title="Government Entity"
-  description="Platinum Choice Consulting is a HUBZone-certified, woman minority-owned company providing workforce development consulting to government agencies. UEI ZEJBM3DSLF58, CAGE 8UAV4."
-  image="/images/government-team.jpg"
+  description="HUBZone, EDWOSB and WOSB certified workforce development partner for government agencies. UEI ZEJBM3DSLF58, CAGE 8UAV4, NAICS and PSC codes."
 />
 
 <PageHero

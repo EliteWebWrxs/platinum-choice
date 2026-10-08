@@ -28,7 +28,7 @@
 
 <Seo
   title="Services"
-  description="Workforce solutions, direct hire, customized staffing solutions and consultation from Platinum Choice Consulting, with more than 60 years of combined professional experience."
+  description="Workforce solutions, direct hire, customized staffing and consulting from Platinum Choice Consulting, backed by 60+ years of professional experience."
 />
 
 <PageHero

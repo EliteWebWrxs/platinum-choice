@@ -1,6 +1,9 @@
+import { SITE_URL } from '$app/env/public';
+
 export const site = {
   name: 'Platinum Choice Consulting',
-  url: 'https://www.platinumchoice.consulting',
+  // Set SITE_URL in the environment when the domain changes
+  url: SITE_URL,
   phone: '(813) 683-2995',
   phoneHref: 'tel:+18136832995',
   mobile: '(443) 766-9087',

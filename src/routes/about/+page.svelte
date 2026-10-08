@@ -18,8 +18,7 @@
 
 <Seo
   title="About Us"
-  description="Meet Desiree L. Watkins, CEO of Platinum Choice Consulting, a woman-owned, minority-owned small business providing business support and human capital professionals."
-  image="/images/desiree-watkins.jpg"
+  description="Meet CEO Desiree L. Watkins and the team behind Platinum Choice Consulting, a woman-owned, minority-owned provider of HR and human capital professionals."
 />
 
 <PageHero

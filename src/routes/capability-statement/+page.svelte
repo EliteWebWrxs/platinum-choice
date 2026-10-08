@@ -46,7 +46,7 @@
 
 <Seo
   title="Capability Statement"
-  description="Platinum Choice Consulting capability statement: HUBZone, EDWOSB, WOSB, WBE, MBE and AABE certified. UEI ZEJBM3DSLF58, CAGE 8UAV4, NAICS and PSC codes, differentiators and past performance."
+  description="Capability statement: HUBZone, EDWOSB, WOSB, WBE, MBE and AABE certified. UEI ZEJBM3DSLF58, CAGE 8UAV4, NAICS and PSC codes, and past performance."
 />
 
 <div class="print:hidden">

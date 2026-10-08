@@ -7,7 +7,7 @@
 
 <Seo
   title="Mission"
-  description="Our mission is simple: to help organizations achieve success through people by providing quality professionals and solutions to our clients and the populations we serve."
+  description="Our mission: help organizations achieve success through people, with quality professionals and solutions for our clients and the communities we serve."
 />
 
 <section class="relative isolate overflow-hidden bg-ink text-paper">
