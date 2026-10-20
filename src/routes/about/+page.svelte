@@ -121,11 +121,11 @@
         <div class="relative">
           <div class="absolute -inset-2 -z-10 -rotate-2 rounded-[2.25rem] bg-brand"></div>
           <img
-            src="/images/desiree-watkins.jpg"
+            src="/images/desiree-watkins-headshot.jpg"
             alt="Portrait of Desiree L. Watkins"
-            width="761"
-            height="1000"
-            class="aspect-[4/5] w-full rounded-[2rem] object-cover object-top"
+            width="1000"
+            height="1500"
+            class="aspect-[4/5] w-full rounded-[2rem] object-cover"
           />
         </div>
 

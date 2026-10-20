@@ -24,14 +24,10 @@ export const nav = [
 
 /** Registration details, certifications and codes, as listed on the Government Entity page */
 export const credentials = {
-  certifications: ['HUBZone', 'EDWOSB', 'WOSB', 'WBE', 'MBE', 'AABE'],
+  certifications: ['HUBZone', 'WOSB'],
   certificationNames: /** @type {Record<string, string>} */ ({
     HUBZone: 'SBA: Historically Underutilized Business Zones',
-    EDWOSB: 'SAM: Economically Disadvantaged Women-Owned Small Business',
-    WOSB: 'SAM: Women-Owned Small Business',
-    WBE: 'SAM: Women Business Enterprise',
-    MBE: 'SAM: Minority Business Enterprise',
-    AABE: 'SAM: African American Business Enterprise'
+    WOSB: 'SAM: Women-Owned Small Business'
   }),
   legalName: 'Platinum Choice Consulting, Inc.',
   address: ['4825 Sevilla Shores Drive', 'Wimauma, FL 33598'],

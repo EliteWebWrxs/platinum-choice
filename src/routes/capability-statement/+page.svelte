@@ -9,13 +9,17 @@
 
   // Content from the current capability statement
   const whatWeDo = [
+    'Platinum Choice Consulting, Inc. provides professional services focusing on human resources consulting, change management, and strategic organizational development. The firm delivers workforce restructuring, talent management, healthcare staffing, business process improvement, and performance management solutions to federal and state agencies.',
     'We possess SMEs and consultants that provide a full range of HR and management support services personnel to provide strategic and operational administrative support to a variety of clients and the communities that we serve.',
     'We excel in recruiting, identifying and providing short- and long-term temporary personnel to assist companies with workload fluctuations and unexpected or temporary demands.',
     'Our corporate focus is delivering expert people, ensuring each business has knowledgeable, experienced, and innovative people to carry them into the future.',
-    'We provide business support to commercial, nonprofit and public sectors.'
+    'We provide business support to commercial, nonprofit and public sectors.',
+    'PCC also provides contractual human resources services, including a job board and talent management, to the private non-profit Damien Ministries. Certified as a WOSB small business, the company uses NAICS codes 541612 and 541613 to support government initiatives that require specialized human capital and management consulting expertise.'
   ];
 
   const differentiators = [
+    'Client-centric approach: we prioritize building strong relationships with our clients.',
+    'Trusted partner with a solid and proven track record of success and a portfolio of satisfied clients, such as the University of Maryland Global, National Institutes of Health, Virginia State University, and STG International.',
     'Combined 60 years of seasoned leadership in judicial, legislative, and executive branches of government, including state and local.',
     'In-depth knowledge of federal acquisition strategies.',
     'Functional expertise of operational areas.',
@@ -25,6 +29,7 @@
   ];
 
   const pastPerformance = [
+    'Past performance encompasses a subcontractor relationship with prime healthcare contractor STG International, managing a National Institutes of Health staffing contract.',
     'Qualified senior-level executive with over thirty-five years of professional experience serving in leadership and advisory roles to senior executives on administrative, financial, operational, and managerial issues.',
     'Managed over one billion dollars of health and detention services contracts per year for the federal government.',
     'Supervised federal and contract employees performing work at the GS 15, 14, 13, and 12 levels who perform broad/extensive assignments related to government programs that are of significant interest to the public and Congress.',
@@ -46,7 +51,7 @@
 
 <Seo
   title="Capability Statement"
-  description="Capability statement: HUBZone, EDWOSB, WOSB, WBE, MBE and AABE certified. UEI ZEJBM3DSLF58, CAGE 8UAV4, NAICS and PSC codes, and past performance."
+  description="Capability statement: HUBZone and WOSB certified. UEI ZEJBM3DSLF58, CAGE 8UAV4, NAICS and PSC codes, and past performance."
 />
 
 <div class="print:hidden">
@@ -203,9 +208,9 @@
           </h3>
           <div class="mt-5 flex flex-wrap items-center gap-8">
             <img
-              src="/images/sba-wosb-edwosb.png"
-              alt="SBA certified Woman Owned Small Business (WOSB) and Economically Disadvantaged Women-Owned Small Business (EDWOSB)"
-              width="1056"
+              src="/images/sba-wosb.png"
+              alt="SBA certified Woman Owned Small Business (WOSB)"
+              width="650"
               height="135"
               loading="lazy"
               class="h-9 w-auto sm:h-11"

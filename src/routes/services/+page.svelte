@@ -85,15 +85,18 @@
           </p>
         </article>
         <article class="rounded-[1.75rem] border border-line bg-paper p-8">
-          <h3 class="font-display text-3xl text-ink">Commercial Interior Design</h3>
+          <h3 class="font-display text-3xl text-ink">Non-Profit HR Consulting</h3>
           <p class="mt-4 leading-relaxed">
-            Consultations in creating and directing the construction of commercial spaces. Our
-            designers guide clients to select materials, colors, and furnishings that align with the
-            company’s brand aesthetic.
+            Platinum Choice Consulting provides specialized human resources consulting to
+            non-profits serving marginalized areas for employment opportunities through job
+            preparation consisting of coaching, resume and etiquette preparation, supplemented by a
+            Job Aggregation Engine that utilizes web scraping technologies or APIs to gather job
+            listings from multiple external job boards like Indeed, LinkedIn, and others that allow
+            API access.
           </p>
           <p class="mt-4 leading-relaxed">
-            Interior designers and interior design consultants work in areas such as hospitality,
-            healthcare, commercial and corporate design.
+            The engine will filter these listings to focus on entry-level jobs and those highlighted
+            as ‘diversity-friendly’ in specific demographic areas of the clientele.
           </p>
         </article>
       </div>
