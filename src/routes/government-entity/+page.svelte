@@ -17,6 +17,8 @@
 <Seo
   title="Government Entity"
   description="HUBZone and WOSB certified workforce development partner for government agencies. UEI ZEJBM3DSLF58, CAGE 8UAV4, NAICS and PSC codes."
+  image="/images/og/government-entity.jpg"
+  imageAlt="A workforce that stays: HUBZone and WOSB certified government partner"
 />
 
 <PageHero

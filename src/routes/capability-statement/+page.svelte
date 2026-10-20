@@ -52,6 +52,8 @@
 <Seo
   title="Capability Statement"
   description="Capability statement: HUBZone and WOSB certified. UEI ZEJBM3DSLF58, CAGE 8UAV4, NAICS and PSC codes, and past performance."
+  image="/images/og/capability-statement.jpg"
+  imageAlt="Built for government, ready for business: PCC capability statement"
 />
 
 <div class="print:hidden">

@@ -8,6 +8,8 @@
 <Seo
   title="Mission"
   description="Our mission: help organizations achieve success through people, with quality professionals and solutions for our clients and the communities we serve."
+  image="/images/og/mission.jpg"
+  imageAlt="Our mission: success through people"
 />
 
 <section class="relative isolate overflow-hidden bg-ink text-paper">

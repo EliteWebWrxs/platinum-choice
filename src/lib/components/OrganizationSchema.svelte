@@ -10,7 +10,7 @@
     legalName: credentials.legalName,
     url: site.url,
     logo: `${site.url}/images/logo.png`,
-    image: `${site.url}/images/og-default.jpg`,
+    image: `${site.url}/images/og/home.jpg`,
     description:
       'Woman-owned, minority-owned HR, staffing and workforce solutions firm serving government, corporate and nonprofit clients.',
     telephone: '+1-813-683-2995',

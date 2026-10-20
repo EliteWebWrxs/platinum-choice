@@ -19,6 +19,8 @@
 <Seo
   title="Contact"
   description="Contact Platinum Choice Consulting to request staff or discuss workforce solutions. Call (813) 683-2995 or email PlatinumChoiceConsulting@gmail.com."
+  image="/images/og/contact.jpg"
+  imageAlt="Let’s start a conversation: call (813) 683-2995"
 />
 
 <section class="relative isolate overflow-hidden">
