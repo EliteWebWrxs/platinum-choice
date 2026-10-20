@@ -13,13 +13,10 @@
     'We possess SMEs and consultants that provide a full range of HR and management support services personnel to provide strategic and operational administrative support to a variety of clients and the communities that we serve.',
     'We excel in recruiting, identifying and providing short- and long-term temporary personnel to assist companies with workload fluctuations and unexpected or temporary demands.',
     'Our corporate focus is delivering expert people, ensuring each business has knowledgeable, experienced, and innovative people to carry them into the future.',
-    'We provide business support to commercial, nonprofit and public sectors.',
-    'PCC also provides contractual human resources services, including a job board and talent management, to the private non-profit Damien Ministries. Certified as a WOSB small business, the company uses NAICS codes 541612 and 541613 to support government initiatives that require specialized human capital and management consulting expertise.'
+    'We provide business support to commercial, nonprofit and public sectors.'
   ];
 
   const differentiators = [
-    'Client-centric approach: we prioritize building strong relationships with our clients.',
-    'Trusted partner with a solid and proven track record of success and a portfolio of satisfied clients, such as the University of Maryland Global, National Institutes of Health, Virginia State University, and STG International.',
     'Combined 60 years of seasoned leadership in judicial, legislative, and executive branches of government, including state and local.',
     'In-depth knowledge of federal acquisition strategies.',
     'Functional expertise of operational areas.',
@@ -45,13 +42,96 @@
     { label: 'CAGE code', value: credentials.cage }
   ];
 
+  // Second statement: Workforce Development Training (page 2 of the PDF)
+  const training = [
+    'Platinum Choice Consulting specializes in delivering comprehensive and innovative workforce development training solutions tailored to meet the evolving needs of businesses and organizations across various industries.',
+    'Committed to excellence and focused on empowering individuals with the skills necessary for success in today’s dynamic workforce.',
+    'Offer a range of training programs designed to enhance productivity, efficiency, and overall performance.',
+    'PCC also provides contractual human resources services, including a job board and talent management, to the private non-profit Damien Ministries. Certified as a WOSB small business, the company uses NAICS codes 541612 and 541613 to support government initiatives that require specialized human capital and management consulting expertise.'
+  ];
+
+  const competencies = [
+    {
+      lead: 'Customized Training Programs',
+      text: 'Experienced trainers work closely with clients to develop customized training programs that address specific needs, goals, and objectives.'
+    },
+    {
+      lead: 'Industry Expertise',
+      text: 'Our trainers possess extensive industry experience and stay updated on the latest trends, regulations, and best practices to deliver impactful and actionable training.'
+    },
+    {
+      lead: 'Innovative Training Methods',
+      text: 'We leverage cutting-edge instructional design techniques, interactive workshops, simulations, and e-learning platforms to deliver engaging and immersive training experiences.'
+    },
+    {
+      lead: 'Innovative Approach',
+      text: 'Ensures maximum retention and application of knowledge, fostering a culture of continuous learning and improvement within your organization.'
+    },
+    {
+      lead: 'Flexible Delivery Options',
+      text: 'Our scalable training solutions can be adapted to meet the needs of individuals, small groups, or large organizations.'
+    },
+    {
+      lead: 'Measurable Results',
+      text: 'Through pre- and post-assessments, participant feedback surveys, and performance metrics analysis, we evaluate the effectiveness of our training interventions and make data-driven adjustments to optimize outcomes and drive continuous improvement.'
+    }
+  ];
+
+  const keyDifferentiators = [
+    { text: 'Prioritize building strong relationships with our clients.' },
+    {
+      text: 'Trusted partner with a solid and proven track record of success and a portfolio of satisfied clients, such as the University of Maryland Global, National Institutes of Health, Virginia State University, and STG International.'
+    },
+    {
+      text: 'Commitment to quality, integrity, and professionalism that sets us apart and makes us the preferred choice for organizations.'
+    },
+    {
+      lead: 'Sustainability and Scalability',
+      text: 'We design our training programs with sustainability and scalability in mind, ensuring they can adapt and evolve alongside your organization’s changing needs and priorities.'
+    },
+    {
+      text: 'Dedicated to empowering individuals and organizations with the knowledge, skills, and confidence needed to thrive in today’s competitive landscape.'
+    },
+    {
+      text: 'Through our comprehensive workforce development training programs, we help unlock human potential, drive performance improvement, and achieve sustainable success. Partner with us to unlock your workforce’s full potential and take your organization to new heights.'
+    }
+  ];
+
+  const tabs = [
+    { id: 'hr-services', label: 'HR & Management Services' },
+    { id: 'workforce-development', label: 'Workforce Development Training' }
+  ];
+  let active = $state(tabs[0].id);
+
+  // Open the tab named in the URL hash, so each statement can be linked directly
+  $effect(() => {
+    const fromHash = tabs.find((t) => `#${t.id}` === window.location.hash);
+    if (fromHash) active = fromHash.id;
+  });
+
+  /** @param {string} id */
+  function select(id) {
+    active = id;
+    history.replaceState(history.state, '', id === tabs[0].id ? location.pathname : `#${id}`);
+  }
+
+  /** Arrow keys move between tabs, per the WAI-ARIA tabs pattern @param {KeyboardEvent} e */
+  function onTabKey(e) {
+    const step = { ArrowRight: 1, ArrowLeft: -1 }[e.key];
+    if (!step) return;
+    const i = tabs.findIndex((t) => t.id === active);
+    const next = tabs[(i + step + tabs.length) % tabs.length];
+    select(next.id);
+    document.getElementById(`tab-${next.id}`)?.focus();
+  }
+
   const heading = 'font-display text-3xl text-ink sm:text-4xl print:text-2xl';
   const sideHeading = 'font-display text-3xl text-ink print:text-2xl';
 </script>
 
 <Seo
   title="Capability Statement"
-  description="Capability statement: HUBZone and WOSB certified. UEI ZEJBM3DSLF58, CAGE 8UAV4, NAICS and PSC codes, and past performance."
+  description="Capability statements for HR and management services and workforce development training. HUBZone and WOSB certified. UEI ZEJBM3DSLF58, CAGE 8UAV4."
   image="/images/og/capability-statement.jpg"
   imageAlt="Built for government, ready for business: PCC capability statement"
 />
@@ -87,6 +167,31 @@
 
 <!-- The statement, laid out as a single document -->
 <section class="mx-auto max-w-7xl py-0 sm:px-8 sm:py-24 print:max-w-none print:p-0">
+  <div
+    role="tablist"
+    aria-label="Capability statements"
+    class="mx-5 my-8 flex flex-col gap-1 rounded-[1.75rem] border border-line bg-paper-deep/70 p-1.5 sm:mx-auto sm:mt-0 sm:mb-10 sm:w-fit sm:flex-row sm:rounded-full print:hidden"
+  >
+    {#each tabs as tab (tab.id)}
+      <button
+        type="button"
+        role="tab"
+        id="tab-{tab.id}"
+        aria-controls="panel-{tab.id}"
+        aria-selected={active === tab.id}
+        tabindex={active === tab.id ? 0 : -1}
+        onclick={() => select(tab.id)}
+        onkeydown={onTabKey}
+        class={[
+          'rounded-full px-6 py-3 text-sm font-semibold transition sm:text-base',
+          active === tab.id ? 'bg-ink text-paper shadow-md' : 'text-ink-soft hover:text-ink'
+        ]}
+      >
+        {tab.label}
+      </button>
+    {/each}
+  </div>
+
   <article
     use:reveal
     class="overflow-hidden border-y border-line bg-paper sm:rounded-[2rem] sm:border sm:shadow-2xl sm:shadow-ink/10 print:rounded-none print:border-0 print:text-[9.5pt] print:shadow-none"
@@ -114,10 +219,23 @@
         >
           Capability Statement
         </h2>
+        {#if active === 'workforce-development'}
+          <p
+            class="mt-1 text-center text-xs font-semibold tracking-[0.25em] text-paper uppercase sm:text-sm"
+          >
+            Workforce development training
+          </p>
+        {/if}
       </div>
     </header>
 
-    <div class="grid lg:grid-cols-[1fr_24rem] print:grid-cols-[1fr_17rem]">
+    <div
+      role="tabpanel"
+      id="panel-hr-services"
+      aria-labelledby="tab-hr-services"
+      hidden={active !== 'hr-services'}
+      class="grid lg:grid-cols-[1fr_24rem] print:grid-cols-[1fr_17rem]"
+    >
       <!-- Main column -->
       <div class="space-y-14 px-6 py-12 sm:px-12 print:space-y-8 print:py-8">
         <section>
@@ -278,6 +396,73 @@
                   class="mt-2 size-2.5 shrink-0 rounded-full bg-ember print:[print-color-adjust:exact]"
                 ></span>
                 {item}
+              </li>
+            {/each}
+          </ul>
+        </section>
+      </aside>
+    </div>
+
+    <div
+      role="tabpanel"
+      id="panel-workforce-development"
+      aria-labelledby="tab-workforce-development"
+      hidden={active !== 'workforce-development'}
+      class="grid lg:grid-cols-[1fr_24rem] print:grid-cols-[1fr_17rem]"
+    >
+      <!-- Main column -->
+      <div class="space-y-14 px-6 py-12 sm:px-12 print:space-y-8 print:py-8">
+        <section>
+          <h3 class={heading}>Workforce development training</h3>
+          <ul class="mt-6 space-y-4 leading-relaxed">
+            {#each training as item (item)}
+              <li class="flex gap-4">
+                <span
+                  class="mt-2 size-2.5 shrink-0 rounded-full bg-gold print:[print-color-adjust:exact]"
+                ></span>
+                {item}
+              </li>
+            {/each}
+          </ul>
+        </section>
+
+        <section>
+          <h3 class={heading}>Key differentiators</h3>
+          <h4 class="mt-6 text-xs font-semibold tracking-[0.2em] text-ink-muted uppercase">
+            Client-centric approach
+          </h4>
+          <ul class="mt-4 space-y-4 leading-relaxed">
+            {#each keyDifferentiators as item (item.text)}
+              <li class="flex gap-4">
+                <span
+                  class="mt-2 size-2.5 shrink-0 rounded-full bg-gold print:[print-color-adjust:exact]"
+                ></span>
+                <span>
+                  {#if item.lead}<strong class="font-semibold text-ink">{item.lead}:</strong>{/if}
+                  {item.text}
+                </span>
+              </li>
+            {/each}
+          </ul>
+        </section>
+      </div>
+
+      <!-- Side column -->
+      <aside
+        class="border-t border-line bg-gold/15 px-6 py-12 sm:px-12 lg:border-t-0 lg:border-l lg:px-9 print:border-t-0 print:border-l print:px-6 print:py-8 print:[print-color-adjust:exact]"
+      >
+        <section>
+          <h3 class={sideHeading}>Core competencies</h3>
+          <ul class="mt-6 space-y-5 text-[0.95rem] leading-relaxed">
+            {#each competencies as item (item.lead)}
+              <li class="flex gap-3.5">
+                <span
+                  class="mt-2 size-2.5 shrink-0 rounded-full bg-ember print:[print-color-adjust:exact]"
+                ></span>
+                <span>
+                  <strong class="block font-semibold text-ink">{item.lead}</strong>
+                  {item.text}
+                </span>
               </li>
             {/each}
           </ul>
