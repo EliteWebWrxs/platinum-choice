@@ -5,14 +5,29 @@
   import { reveal } from '#lib/actions/reveal.js';
   import { site } from '#lib/site.js';
 
-  const expertise = [
-    'Human Resources Management',
-    'Leadership/Team Development',
-    'Workforce Development & Coaching',
-    'Diversity & Inclusion Strategic Planning',
-    'Employer-Employee Relations',
-    'Financial Management & Budgeting Skills',
-    'Organizational Skills'
+  const competencies = [
+    'Executive Leadership and Strategic Management',
+    'Federal Government Operations and Administration',
+    'Federal Program Implementation and Management',
+    'Public Sector and Legislative Affairs Experience',
+    'Government Contract Oversight and Administration',
+    'Contracting Officer’s Representative (COR) Functions',
+    'Organizational Development and Change Management',
+    'Operational and Administrative Management',
+    'Collaboration and Relationship Management',
+    'Recruitment and Staffing Management',
+    'Leadership Development and Succession Planning',
+    'Human Capital Strategy',
+    'Workforce Development and Talent Acquisition',
+    'Government & Private Sector Partnership Development',
+    'Program Management',
+    'Career Development & Executive Coaching',
+    'Board Governance & Non-Profit Leadership Training',
+    'Mentoring & Workforce Readiness',
+    'Workforce Investment Program',
+    'Women’s Workforce Advancement Initiatives',
+    'Financial Planning and Employment Readiness Training',
+    'Business Communications and Stakeholder Engagement'
   ];
 </script>
 
@@ -84,6 +99,9 @@
 {#snippet ownerHeading()}
   <p class="text-xs font-semibold tracking-[0.25em] text-flame-dark uppercase">Meet the owner</p>
   <h2 class="mt-5 font-display text-5xl leading-tight text-ink sm:text-6xl">Desiree L. Watkins</h2>
+  <p class="mt-4 text-sm font-semibold tracking-[0.15em] text-ink-muted uppercase">
+    Executive Leadership · Human Capital · Workforce Development
+  </p>
 {/snippet}
 
 {#snippet contactCard()}
@@ -140,44 +158,52 @@
 
       <div class="mt-8 space-y-6 text-lg leading-relaxed">
         <p>
-          Desiree L. Watkins possesses 31 years of Federal Government experience directly supporting
-          Federal Government programming, serving in leadership and advisory roles in executive
-          management, human capital, managerial, operational, financial, workforce
-          development/coaching and administrative issues. She has also served in the Executive and
-          Legislative branches of the federal government.
+          Desiree L. Watkins is a seasoned federal government professional with 31 years of
+          experience providing strategic leadership, advisory services, and program support across
+          the Executive and Legislative branches of the U.S. Government. Her expertise spans
+          executive management, human capital, organizational operations, financial and
+          administrative management, workforce development, career coaching, and program
+          implementation.
         </p>
         <p>
-          She possesses direct experience overseeing government contracts as a Contracting Officer
-          Representative, acting as the business communications liaison between the Government and
-          the private sector monitoring contract performance. Her experience includes providing
-          technical expertise necessary to convey and meet the technical requirements of the
-          Government.
+          Throughout her distinguished career, Ms. Watkins has demonstrated extensive experience in
+          federal contract oversight, serving as a Contracting Officer’s Representative (COR) and as
+          a liaison between government agencies and private-sector partners. In this capacity, she
+          has monitored contract performance, provided technical guidance, and helped ensure that
+          contractual deliverables align with federal requirements and program objectives.
         </p>
         <p>
           During her tenure as a Human Resources Executive at the Administrative Office of the U.S.
-          Courts in Washington, DC, she was responsible for the implementation, management and
-          enhancement of the agency’s Special Recruitment and Staffing Programs. She also
-          established a Workforce Investment Program partnering with private sector companies
-          enabling women entering/reentering the workforce with federal contract opportunities, many
-          of whom successfully transitioned to permanent federal employment.
+          Courts in Washington, D.C., Ms. Watkins was responsible for implementing, managing, and
+          enhancing the agency’s Special Recruitment and Staffing Programs. Recognizing the
+          importance of workforce accessibility and professional advancement, she established a
+          Workforce Investment Program in partnership with private-sector companies to create
+          federal contracting opportunities for women entering or reentering the workforce. Many
+          program participants successfully transitioned into permanent federal employment.
         </p>
         <p>
-          Through this program she provided Career Development and Coaching, training, and mentoring
-          to staff to guarantee smooth operations between participants and hiring managers. She
-          developed comprehensive life skills modules in an academic environment, such as financial
-          planning, employment readiness, preparation, retention and career development.
+          Ms. Watkins’s commitment to workforce empowerment extends beyond recruitment and
+          placement. Through career development and coaching, professional training, and mentoring,
+          she supported program participants and hiring managers in fostering effective working
+          relationships and maintaining operational continuity. She also developed comprehensive
+          life-skills curricula in an academic setting, addressing financial planning, employment
+          readiness, workplace preparation, employee retention, and long-term career development.
         </p>
         <p>
-          She sits on the Board of the National Association of Women Business Owners (NAWBO), Tampa
-          Lakeland Chapter.
+          In addition to her federal service, Ms. Watkins has contributed her leadership and
+          business acumen to the National Association of Women Business Owners (NAWBO),
+          Tampa-Lakeland Chapter, where she served on the Board of Directors. Her professional
+          experience reflects a sustained commitment to leadership, workforce advancement, strategic
+          partnerships, and creating opportunities for women to achieve professional and economic
+          success.
         </p>
       </div>
 
       <h3 class="mt-14 text-xs font-semibold tracking-[0.25em] text-ink-muted uppercase">
-        Expertise
+        Core Competencies
       </h3>
       <ul class="mt-6 grid gap-3 sm:grid-cols-2">
-        {#each expertise as item (item)}
+        {#each competencies as item (item)}
           <li
             class="flex items-start gap-3 rounded-2xl border border-line bg-paper px-5 py-4 font-medium text-ink"
           >
