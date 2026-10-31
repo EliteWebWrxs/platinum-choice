@@ -97,8 +97,9 @@
             API access.
           </p>
           <p class="mt-4 leading-relaxed">
-            The engine will filter these listings to focus on entry-level jobs and those highlighted
-            as ‘diversity-friendly’ in specific demographic areas of the clientele.
+            Job listings will be tailored to the geographic locations, demographic characteristics,
+            skill levels, and employment needs of the clientele, ensuring access to relevant and
+            inclusive career opportunities.
           </p>
         </article>
       </div>

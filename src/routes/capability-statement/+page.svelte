@@ -78,23 +78,12 @@
   ];
 
   const keyDifferentiators = [
-    { text: 'Prioritize building strong relationships with our clients.' },
-    {
-      text: 'Trusted partner with a solid and proven track record of success and a portfolio of satisfied clients, such as the University of Maryland Global, National Institutes of Health, Virginia State University, and STG International.'
-    },
-    {
-      text: 'Commitment to quality, integrity, and professionalism that sets us apart and makes us the preferred choice for organizations.'
-    },
-    {
-      lead: 'Sustainability and Scalability',
-      text: 'We design our training programs with sustainability and scalability in mind, ensuring they can adapt and evolve alongside your organization’s changing needs and priorities.'
-    },
-    {
-      text: 'Dedicated to empowering individuals and organizations with the knowledge, skills, and confidence needed to thrive in today’s competitive landscape.'
-    },
-    {
-      text: 'Through our comprehensive workforce development training programs, we help unlock human potential, drive performance improvement, and achieve sustainable success. Partner with us to unlock your workforce’s full potential and take your organization to new heights.'
-    }
+    'Prioritize building strong relationships with our clients.',
+    'Trusted partner with a solid and proven track record of success and a portfolio of satisfied clients, such as the University of Maryland Global, National Institutes of Health, Virginia State University, and STG International.',
+    'Commitment to quality, integrity, and professionalism that sets us apart and makes us the preferred choice for organizations.',
+    'Sustainability and Scalability: We design our training programs with sustainability and scalability in mind, ensuring they can adapt and evolve alongside your organization’s changing needs and priorities.',
+    'Dedicated to empowering individuals and organizations with the knowledge, skills, and confidence needed to thrive in today’s competitive landscape.',
+    'Through our comprehensive workforce development training programs, we help unlock human potential, drive performance improvement, and achieve sustainable success. Partner with us to unlock your workforce’s full potential and take your organization to new heights.'
   ];
 
   const tabs = [
@@ -432,15 +421,12 @@
             Client-centric approach
           </h4>
           <ul class="mt-4 space-y-4 leading-relaxed">
-            {#each keyDifferentiators as item (item.text)}
+            {#each keyDifferentiators as item (item)}
               <li class="flex gap-4">
                 <span
                   class="mt-2 size-2.5 shrink-0 rounded-full bg-gold print:[print-color-adjust:exact]"
                 ></span>
-                <span>
-                  {#if item.lead}<strong class="font-semibold text-ink">{item.lead}:</strong>{/if}
-                  {item.text}
-                </span>
+                {item}
               </li>
             {/each}
           </ul>

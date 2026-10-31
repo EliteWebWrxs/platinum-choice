@@ -6,28 +6,18 @@
   import { site } from '#lib/site.js';
 
   const competencies = [
-    'Executive Leadership and Strategic Management',
-    'Federal Government Operations and Administration',
-    'Federal Program Implementation and Management',
-    'Public Sector and Legislative Affairs Experience',
-    'Government Contract Oversight and Administration',
-    'Contracting Officer’s Representative (COR) Functions',
-    'Organizational Development and Change Management',
-    'Operational and Administrative Management',
-    'Collaboration and Relationship Management',
-    'Recruitment and Staffing Management',
-    'Leadership Development and Succession Planning',
+    'Executive Leadership',
     'Human Capital Strategy',
-    'Workforce Development and Talent Acquisition',
+    'Workforce Development',
+    'Federal Contract Oversight and Administration',
     'Government & Private Sector Partnership Development',
     'Program Management',
-    'Career Development & Executive Coaching',
-    'Board Governance & Non-Profit Leadership Training',
-    'Mentoring & Workforce Readiness',
-    'Workforce Investment Program',
-    'Women’s Workforce Advancement Initiatives',
-    'Financial Planning and Employment Readiness Training',
-    'Business Communications and Stakeholder Engagement'
+    'Career Coaching & Executive Coaching',
+    'Recruitment & Staffing',
+    'Organizational Development',
+    'Board Governance',
+    'Training & Mentoring',
+    'Stakeholder Relations'
   ];
 </script>
 
@@ -156,48 +146,18 @@
     <div class="lg:col-span-7 lg:pl-6" use:reveal={120}>
       <div class="hidden lg:block">{@render ownerHeading()}</div>
 
-      <div class="mt-8 space-y-6 text-lg leading-relaxed">
-        <p>
-          Desiree L. Watkins is a seasoned federal government professional with 31 years of
-          experience providing strategic leadership, advisory services, and program support across
-          the Executive and Legislative branches of the U.S. Government. Her expertise spans
-          executive management, human capital, organizational operations, financial and
-          administrative management, workforce development, career coaching, and program
-          implementation.
-        </p>
-        <p>
-          Throughout her distinguished career, Ms. Watkins has demonstrated extensive experience in
-          federal contract oversight, serving as a Contracting Officer’s Representative (COR) and as
-          a liaison between government agencies and private-sector partners. In this capacity, she
-          has monitored contract performance, provided technical guidance, and helped ensure that
-          contractual deliverables align with federal requirements and program objectives.
-        </p>
-        <p>
-          During her tenure as a Human Resources Executive at the Administrative Office of the U.S.
-          Courts in Washington, D.C., Ms. Watkins was responsible for implementing, managing, and
-          enhancing the agency’s Special Recruitment and Staffing Programs. Recognizing the
-          importance of workforce accessibility and professional advancement, she established a
-          Workforce Investment Program in partnership with private-sector companies to create
-          federal contracting opportunities for women entering or reentering the workforce. Many
-          program participants successfully transitioned into permanent federal employment.
-        </p>
-        <p>
-          Ms. Watkins’s commitment to workforce empowerment extends beyond recruitment and
-          placement. Through career development and coaching, professional training, and mentoring,
-          she supported program participants and hiring managers in fostering effective working
-          relationships and maintaining operational continuity. She also developed comprehensive
-          life-skills curricula in an academic setting, addressing financial planning, employment
-          readiness, workplace preparation, employee retention, and long-term career development.
-        </p>
-        <p>
-          In addition to her federal service, Ms. Watkins has contributed her leadership and
-          business acumen to the National Association of Women Business Owners (NAWBO),
-          Tampa-Lakeland Chapter, where she served on the Board of Directors. Her professional
-          experience reflects a sustained commitment to leadership, workforce advancement, strategic
-          partnerships, and creating opportunities for women to achieve professional and economic
-          success.
-        </p>
-      </div>
+      <p class="mt-8 text-lg leading-relaxed">
+        Desiree L. Watkins is a seasoned executive with more than 31 years of federal government
+        experience spanning executive leadership, human capital management, workforce development,
+        contract oversight, and organizational effectiveness. Her expertise includes strategic
+        workforce planning, federal staffing and recruitment programs, career coaching, leadership
+        development, government contract management, stakeholder engagement, and public-private
+        partnerships. She has successfully led initiatives that advance workforce readiness,
+        employee development, and operational excellence while serving in both the Executive and
+        Legislative branches of the federal government. Her leadership extends to board governance
+        through her service with the National Association of Women Business Owners (NAWBO) Tampa
+        Lakeland Chapter.
+      </p>
 
       <h3 class="mt-14 text-xs font-semibold tracking-[0.25em] text-ink-muted uppercase">
         Core Competencies
