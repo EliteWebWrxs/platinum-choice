@@ -55,7 +55,7 @@
         </li>
         <li>
           <a href={site.altSite} class="transition hover:text-paper" rel="noopener">
-            PlatinumChoiceConsulting.net
+            www.platinumchoiceconsultants.com
           </a>
         </li>
       </ul>

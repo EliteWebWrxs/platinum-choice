@@ -90,7 +90,8 @@
   <p class="text-xs font-semibold tracking-[0.25em] text-flame-dark uppercase">Meet the owner</p>
   <h2 class="mt-5 font-display text-5xl leading-tight text-ink sm:text-6xl">Desiree L. Watkins</h2>
   <p class="mt-4 text-sm font-semibold tracking-[0.15em] text-ink-muted uppercase">
-    Executive Leadership · Human Capital · Workforce Development
+    Executive Leadership · Human Capital Management · Workforce Development · Organizational
+    Excellence
   </p>
 {/snippet}
 
@@ -146,18 +147,35 @@
     <div class="lg:col-span-7 lg:pl-6" use:reveal={120}>
       <div class="hidden lg:block">{@render ownerHeading()}</div>
 
-      <p class="mt-8 text-lg leading-relaxed">
-        Desiree L. Watkins is a seasoned executive with more than 31 years of federal government
-        experience spanning executive leadership, human capital management, workforce development,
-        contract oversight, and organizational effectiveness. Her expertise includes strategic
-        workforce planning, federal staffing and recruitment programs, career coaching, leadership
-        development, government contract management, stakeholder engagement, and public-private
-        partnerships. She has successfully led initiatives that advance workforce readiness,
-        employee development, and operational excellence while serving in both the Executive and
-        Legislative branches of the federal government. Her leadership extends to board governance
-        through her service with the National Association of Women Business Owners (NAWBO) Tampa
-        Lakeland Chapter.
-      </p>
+      <div class="mt-8 space-y-6 text-lg leading-relaxed">
+        <p>
+          Desiree L. Watkins is a distinguished executive with more than 31 years of federal
+          government experience, bringing extensive expertise in executive leadership, human capital
+          management, workforce development, government contract oversight, and organizational
+          effectiveness. A former Human Resources executive with the Administrative Office of the
+          U.S. Courts in Washington, D.C., Ms. Watkins has built an accomplished career providing
+          strategic leadership across the Executive, Judicial, and Legislative branches of the
+          federal government. Her expertise includes strategic workforce planning, federal staffing
+          and recruitment, career coaching, leadership development, government contract management,
+          stakeholder engagement, and cultivating public-private partnerships.
+        </p>
+        <p>
+          Throughout her career, Ms. Watkins has led initiatives that strengthen workforce
+          readiness, enhance employee development, improve organizational performance, and advance
+          operational excellence. Her leadership reflects a commitment to developing human capital
+          strategies that align workforce capabilities with organizational goals and long-term
+          institutional success.
+        </p>
+        <p>
+          Beyond her federal service, Ms. Watkins has demonstrated a commitment to business
+          leadership, professional development, and community engagement through her board service
+          with the National Association of Women Business Owners (NAWBO), Tampa Lakeland Chapter.
+          With a career distinguished by strategic vision, collaborative leadership, and a
+          dedication to organizational excellence, Ms. Watkins brings valuable insight and
+          executive-level expertise to initiatives focused on workforce innovation, talent
+          development, and sustainable organizational growth.
+        </p>
+      </div>
 
       <h3 class="mt-14 text-xs font-semibold tracking-[0.25em] text-ink-muted uppercase">
         Core Competencies

@@ -31,7 +31,7 @@ BRAND = [(0, (232, 67, 47)), (0.35, (240, 90, 40)), (0.7, (247, 181, 43)), (1, (
 BRAND_TEXT = [(0, (232, 67, 47)), (0.4, (240, 90, 40)), (1, (247, 181, 43))]
 
 CERTS = ['Woman-owned', 'Minority-owned', 'HUBZone', 'WOSB']
-DOMAIN = 'platinumchoice.consulting'
+DOMAIN = 'www.platinumchoiceconsultants.com'
 
 
 def font(family, size, weight=400, italic=False):

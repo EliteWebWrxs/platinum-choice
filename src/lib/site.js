@@ -9,7 +9,7 @@ export const site = {
   mobile: '(443) 766-9087',
   mobileHref: 'tel:+14437669087',
   email: 'PlatinumChoiceConsulting@gmail.com',
-  altSite: 'https://www.platinumchoiceconsulting.net/',
+  altSite: 'https://www.platinumchoiceconsultants.com/',
   serviceAreas: ['Washington, DC', 'Virginia', 'Maryland', 'Tampa']
 };
 

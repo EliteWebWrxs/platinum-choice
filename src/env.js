@@ -10,20 +10,24 @@ export const variables = defineEnvVars({
     description:
       'Public origin of the production site, used for canonical links, social previews and the sitemap',
     schema: (value) => {
-      const url = new URL(value || 'https://www.platinumchoice.consulting');
+      const url = new URL(value || 'https://www.platinumchoiceconsultants.com');
       return url.origin;
     }
   },
-  RESEND_API_KEY: {
-    description: 'API key for https://resend.com, used to deliver contact form messages',
+  MAIL_HOST: {
+    description: 'SMTP server used to deliver contact form messages',
+    schema: (value) => value || 'smtp.gmail.com'
+  },
+  MAIL_PORT: {
+    description: 'SMTP port; 465 connects over TLS, other ports upgrade with STARTTLS',
+    schema: (value) => Number(value || 465)
+  },
+  GOOGLE_EMAIL: {
+    description: 'SMTP login, and the address contact form messages are sent from',
     schema: optional
   },
-  CONTACT_TO_EMAIL: {
-    description: 'Inbox that receives contact form messages',
-    schema: (value) => value || 'platinumchoiceconsulting@gmail.com'
-  },
-  CONTACT_FROM_EMAIL: {
-    description: 'Verified Resend sender, e.g. "PCC Website <website@platinumchoice.consulting>"',
-    schema: (value) => value || 'PCC Website <onboarding@resend.dev>'
+  GOOGLE_EMAIL_PASSWORD: {
+    description: 'SMTP password; for Gmail, an app password rather than the account password',
+    schema: optional
   }
 });

@@ -268,7 +268,7 @@
                   href={site.altSite}
                   rel="noopener"
                   class="font-medium [overflow-wrap:anywhere] text-ink hover:text-flame-dark"
-                  >www.PlatinumChoiceConsulting.net</a
+                  >www.platinumchoiceconsultants.com</a
                 >
               </dd>
             </div>
@@ -463,7 +463,7 @@
       <a href={site.phoneHref} class="hover:text-ink">{site.phone}</a>
       <span class="hidden text-line sm:inline" aria-hidden="true">|</span>
       <a href={site.altSite} rel="noopener" class="hover:text-ink"
-        >www.platinumchoiceconsulting.net</a
+        >www.platinumchoiceconsultants.com</a
       >
       <span class="hidden text-line sm:inline" aria-hidden="true">|</span>
       <a href="mailto:{site.email}" class="break-all hover:text-ink">{site.email.toLowerCase()}</a>

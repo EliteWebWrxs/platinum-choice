@@ -1,8 +1,11 @@
 import { fail } from '@sveltejs/kit';
-import { CONTACT_FROM_EMAIL, CONTACT_TO_EMAIL, RESEND_API_KEY } from '$app/env/private';
+import nodemailer from 'nodemailer';
+import { GOOGLE_EMAIL, GOOGLE_EMAIL_PASSWORD, MAIL_HOST, MAIL_PORT } from '$app/env/private';
 import { site } from '#lib/site.js';
 
 export const prerender = false;
+
+const recipients = ['platinumchoiceconsulting@gmail.com', 'dwatkinsplatinumchoice@gmail.com'];
 
 /** @satisfies {import('./$types').Actions} */
 export const actions = {
@@ -29,24 +32,28 @@ export const actions = {
       return fail(400, { values, error: 'Please include a message.' });
     }
 
-    if (!RESEND_API_KEY) {
-      console.error('Contact form: RESEND_API_KEY is not set, message not delivered');
+    if (!GOOGLE_EMAIL || !GOOGLE_EMAIL_PASSWORD) {
+      console.error(
+        'Contact form: GOOGLE_EMAIL or GOOGLE_EMAIL_PASSWORD is not set, message not delivered'
+      );
       return fail(503, {
         values,
         error: `Our form is temporarily unavailable. Please email us at ${site.email} or call ${site.phone}.`
       });
     }
 
-    const response = await fetch('https://api.resend.com/emails', {
-      method: 'POST',
-      headers: {
-        authorization: `Bearer ${RESEND_API_KEY}`,
-        'content-type': 'application/json'
-      },
-      body: JSON.stringify({
-        from: CONTACT_FROM_EMAIL,
-        to: [CONTACT_TO_EMAIL],
-        reply_to: values.email,
+    const transport = nodemailer.createTransport({
+      host: MAIL_HOST,
+      port: MAIL_PORT,
+      secure: MAIL_PORT === 465,
+      auth: { user: GOOGLE_EMAIL, pass: GOOGLE_EMAIL_PASSWORD }
+    });
+
+    try {
+      await transport.sendMail({
+        from: { name: 'PCC Website', address: GOOGLE_EMAIL },
+        to: recipients,
+        replyTo: { name: values.name, address: values.email },
         subject: `Website enquiry${values.organization ? ` from ${values.organization}` : ''}`,
         text: [
           `Organization: ${values.organization || '-'}`,
@@ -55,11 +62,9 @@ export const actions = {
           '',
           values.message
         ].join('\n')
-      })
-    });
-
-    if (!response.ok) {
-      console.error('Contact form: Resend error', response.status, await response.text());
+      });
+    } catch (error) {
+      console.error('Contact form: SMTP error', error);
       return fail(502, {
         values,
         error: `Sorry, something went wrong sending your message. Please email us at ${site.email}.`
