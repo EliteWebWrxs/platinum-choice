@@ -106,3 +106,30 @@
     transform: none !important;
   }
 }
+
+/* Print shows content that hasn't been scrolled to yet, on letter pages with whole bullets */
+@media print {
+  @page {
+    size: letter;
+    margin: 0.35in;
+  }
+
+  html {
+    font-size: 11px;
+  }
+
+  [data-reveal] {
+    transition: none;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  article li {
+    break-inside: avoid;
+  }
+
+  article h3,
+  article h4 {
+    break-after: avoid;
+  }
+}

@@ -8,12 +8,28 @@
   const pdf = '/files/pcc-capability-statement.pdf';
 
   // Content from the current capability statement
+  const overview = [
+    'Platinum Choice Consulting, Inc. is a HUBZone and WOSB certified small business that provides management consulting, human capital management, and organizational transformation services to federal, state, and nonprofit entities. The firm delivers structured solutions designed to optimize agency operations and workforce performance.',
+    'Core service areas include strategic human resources consulting, organizational development, change management execution, workforce restructuring, business process reengineering, talent management, healthcare staffing, and implementation of performance management frameworks.'
+  ];
+
   const whatWeDo = [
-    'Platinum Choice Consulting, Inc. provides professional services focusing on human resources consulting, change management, and strategic organizational development. The firm delivers workforce restructuring, talent management, healthcare staffing, business process improvement, and performance management solutions to federal and state agencies.',
     'We possess SMEs and consultants that provide a full range of HR and management support services personnel to provide strategic and operational administrative support to a variety of clients and the communities that we serve.',
     'We excel in recruiting, identifying and providing short- and long-term temporary personnel to assist companies with workload fluctuations and unexpected or temporary demands.',
     'Our corporate focus is delivering expert people, ensuring each business has knowledgeable, experienced, and innovative people to carry them into the future.',
     'We provide business support to commercial, nonprofit and public sectors.'
+  ];
+
+  const technicalCapabilities = [
+    'Executes technical solutions aligned with federal Statement of Work (SOW) and Performance Work Statement (PWS) requirements across civilian and defense sectors.',
+    'Job role analysis, competency modeling, workload assessment, workflow optimization, and standard operating procedure development.',
+    'Designs, delivers, and evaluates training curricula, professional development programs, and strategic communications to support seamless organizational transitions and maintain regulatory compliance.'
+  ];
+
+  const contractingSupport = [
+    'SAM.gov-registered entity providing scalable prime and subcontracting support to federal agencies, including the Department of Health and Human Services and its sub-agencies.',
+    'Maintains the operational infrastructure to support simplified acquisitions, Blanket Purchase Agreements, and Indefinite Delivery/Indefinite Quantity contract vehicles.',
+    'Specialized expertise in strategic human capital, administrative support, and organizational performance metrics.'
   ];
 
   const differentiators = [
@@ -26,7 +42,9 @@
   ];
 
   const pastPerformance = [
-    'Past performance encompasses a subcontractor relationship with prime healthcare contractor STG International, managing a National Institutes of Health staffing contract.',
+    'Subcontractor to STG International, Inc.: provided specialized human resources administrative staff and labor resources to support institutional operations at the National Institutes of Health.',
+    'Prime contractor for Damien Ministries: developed and delivered comprehensive workforce development strategies, customized training programs, and capacity-building solutions.',
+    'These engagements demonstrate the firm’s ability to provide full-time equivalent staffing, manage contracts, and meet strict Service Level Agreements.',
     'Qualified senior-level executive with over thirty-five years of professional experience serving in leadership and advisory roles to senior executives on administrative, financial, operational, and managerial issues.',
     'Managed over one billion dollars of health and detention services contracts per year for the federal government.',
     'Supervised federal and contract employees performing work at the GS 15, 14, 13, and 12 levels who perform broad/extensive assignments related to government programs that are of significant interest to the public and Congress.',
@@ -183,28 +201,28 @@
 
   <article
     use:reveal
-    class="overflow-hidden border-y border-line bg-paper sm:rounded-[2rem] sm:border sm:shadow-2xl sm:shadow-ink/10 print:rounded-none print:border-0 print:text-[9.5pt] print:shadow-none"
+    class="overflow-hidden border-y border-line bg-paper sm:rounded-[2rem] sm:border sm:shadow-2xl sm:shadow-ink/10 print:rounded-none print:border-0 print:text-[8pt] print:shadow-none"
   >
     <!-- Letterhead -->
     <header class="relative">
       <div
-        class="flex flex-col items-center gap-6 px-6 pt-10 pb-8 sm:flex-row sm:justify-between sm:px-12"
+        class="flex flex-col items-center gap-6 px-6 pt-10 pb-8 sm:flex-row sm:justify-between sm:px-12 print:pt-5 print:pb-4"
       >
         <img
           src="/images/logo.png"
           alt="Platinum Choice Consulting"
           width="640"
           height="296"
-          class="h-20 w-auto sm:h-24"
+          class="h-20 w-auto sm:h-24 print:h-16"
         />
         <p class="text-center text-sm text-ink-muted sm:text-right">
           {credentials.legalName}<br />
           {credentials.address[0]}, {credentials.address[1]}
         </p>
       </div>
-      <div class="bg-brand px-6 py-5 sm:px-12 print:[print-color-adjust:exact]">
+      <div class="bg-brand px-6 py-5 sm:px-12 print:py-3 print:[print-color-adjust:exact]">
         <h2
-          class="text-center font-display text-4xl font-medium text-paper [font-variant:small-caps] sm:text-6xl"
+          class="text-center font-display text-4xl font-medium text-paper [font-variant:small-caps] sm:text-6xl print:text-4xl"
         >
           Capability Statement
         </h2>
@@ -223,7 +241,7 @@
       id="panel-hr-services"
       aria-labelledby="tab-hr-services"
       hidden={active !== 'hr-services'}
-      class="grid lg:grid-cols-[1fr_24rem] print:grid-cols-[1fr_17rem]"
+      class="grid lg:grid-cols-[1fr_24rem] print:grid-cols-[1fr_23rem]"
     >
       <!-- Main column -->
       <div class="space-y-14 px-6 py-12 sm:px-12 print:space-y-8 print:py-8">
@@ -285,8 +303,41 @@
 
         <section>
           <h3 class={heading}>What we do</h3>
+          <div class="mt-6 space-y-4 leading-relaxed">
+            {#each overview as paragraph (paragraph)}
+              <p>{paragraph}</p>
+            {/each}
+          </div>
           <ul class="mt-6 space-y-4 leading-relaxed">
             {#each whatWeDo as item (item)}
+              <li class="flex gap-4">
+                <span
+                  class="mt-2 size-2.5 shrink-0 rounded-full bg-gold print:[print-color-adjust:exact]"
+                ></span>
+                {item}
+              </li>
+            {/each}
+          </ul>
+        </section>
+
+        <section>
+          <h3 class={heading}>Technical capabilities</h3>
+          <ul class="mt-6 space-y-4 leading-relaxed">
+            {#each technicalCapabilities as item (item)}
+              <li class="flex gap-4">
+                <span
+                  class="mt-2 size-2.5 shrink-0 rounded-full bg-gold print:[print-color-adjust:exact]"
+                ></span>
+                {item}
+              </li>
+            {/each}
+          </ul>
+        </section>
+
+        <section>
+          <h3 class={heading}>Contracting support</h3>
+          <ul class="mt-6 space-y-4 leading-relaxed">
+            {#each contractingSupport as item (item)}
               <li class="flex gap-4">
                 <span
                   class="mt-2 size-2.5 shrink-0 rounded-full bg-gold print:[print-color-adjust:exact]"
@@ -397,7 +448,7 @@
       id="panel-workforce-development"
       aria-labelledby="tab-workforce-development"
       hidden={active !== 'workforce-development'}
-      class="grid lg:grid-cols-[1fr_24rem] print:grid-cols-[1fr_17rem]"
+      class="grid lg:grid-cols-[1fr_24rem] print:grid-cols-[1fr_23rem]"
     >
       <!-- Main column -->
       <div class="space-y-14 px-6 py-12 sm:px-12 print:space-y-8 print:py-8">
